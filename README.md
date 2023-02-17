@@ -1,10 +1,7 @@
 # Robot_URDF
 
-# Mobile Robot
-
 ## Introduction
 this is my mobile robot with urdf
-
 
 ## Package Name
 - robot_description_pkg
