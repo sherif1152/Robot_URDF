@@ -5,20 +5,20 @@
             <!-- Plugin update rate in Hz -->
             <updateRate>100.0</updateRate>
 
-            <!-- Name of front left joint, defaults to `left_joint` -->
-            <leftFrontJoint>frist_left_wheel_joint</leftFrontJoint>
+            <!-- Name of front left joint, defaults to `leftFront` -->
+            <leftFrontJoint>front_left_wheel_joint</leftFrontJoint>
 
-            <!-- Name of front right joint, defaults to `left_joint` -->
-            <rightFrontJoint>frist_right_wheel_joint</rightFrontJoint>
+            <!-- Name of front right joint, defaults to `rightFront` -->
+            <rightFrontJoint>front_right_wheel_joint</rightFrontJoint>
 
-            <!-- Name of back left joint, defaults to `left_joint` -->
-            <leftRearJoint>second_left_wheel_joint</leftRearJoint>
+            <!-- Name of back left joint, defaults to `leftBack` -->
+            <leftRearJoint>back_left_wheel_joint</leftRearJoint>
 
-            <!-- Name of back right joint, defaults to `left_joint` -->
-            <rightRearJoint>second_right_wheel_joint</rightRearJoint>
+            <!-- Name of back right joint, defaults to `rightBack` -->
+            <rightRearJoint>back_right_wheel_joint</rightRearJoint>
 
             <!-- The distance from the center of one wheel to the other, in meters, defaults to 0.34 m -->
-            <wheelSeparation>0.58</wheelSeparation>
+            <wheelSeparation>0.51</wheelSeparation>
 
             <!-- Diameter of the wheels, in meters, defaults to 0.15 m -->
             <wheelDiameter>0.2</wheelDiameter>
