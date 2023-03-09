@@ -18,7 +18,7 @@ this is my mobile robot with urdf
 ## Description
 my robot has four wheel , camera , lider
 
-##Ron
+## Run
 ```
 roslaunch gazebo_pkg gazebo.launch 
 ```
