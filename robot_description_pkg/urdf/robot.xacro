@@ -3,7 +3,9 @@
 
     <xacro:include filename="$(find robot_description_pkg)/urdf/material.xacro"/>
     <xacro:include filename="$(find robot_description_pkg)/urdf/gazebo.xacro"/>
-
+    
+    <link name="base_link">
+    </link>
 
     <!-- CHASSIS LINK -->
     <link name="chassis">
@@ -26,6 +28,10 @@
             </geometry>
         </collision>
     </link>
+    <joint name="joint_name" type="fixed">
+        <parent link="base_link"/>
+        <child link="chassis"/>
+    </joint>
   
 
     <!-- FRONT RIGHT WHEEL LINK --> 
