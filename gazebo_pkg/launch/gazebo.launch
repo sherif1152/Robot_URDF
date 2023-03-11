@@ -13,6 +13,7 @@
   <arg name="world_name" value="$(find robot_description_pkg)/worlds/world.world"/>
    
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(arg world_name)"/>
     <arg name="paused" value="$(arg paused)"/>
     <arg name="use_sim_time" value="$(arg use_sim_time)"/>
     <arg name="gui" value="$(arg gui)"/>
@@ -24,8 +25,8 @@
 	<!-- Find my robot Description-->
 	<param name="robot_description" command="$(find xacro)/xacro --inorder '$(find robot_description_pkg)/urdf/robot.xacro'"/>
 
-	<node name="my_robot_spawn" pkg="gazebo_ros" type="spawn_model" output="screen"
-	args="-urdf -param robot_description -model my_robot" />
+	  <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
+        args="-file $(find robot_description_pkg)/urdf/robot.xacro -urdf -model myrobot"/>
 
 
 	<!-- Send fake joint Values -->
