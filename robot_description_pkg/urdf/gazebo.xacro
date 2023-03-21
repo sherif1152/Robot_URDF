@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="my_robot">
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="myrobot">
     <gazebo>
         <plugin name="skid_steer_drive_controller" filename="libgazebo_ros_skid_steer_drive.so">
             <!-- Plugin update rate in Hz -->
@@ -59,7 +59,7 @@
     </gazebo>
 
     <!-- camera -->
-    <gazebo reference="camera_link">
+    <gazebo reference="camera">
         <sensor type="camera" name="camera1">
         <update_rate>30.0</update_rate>
         <camera name="head">
@@ -88,7 +88,7 @@
             <cameraName>rrbot/camera1</cameraName>
             <imageTopicName>image_raw</imageTopicName>
             <cameraInfoTopicName>camera</cameraInfoTopicName>
-            <frameName>camera_link</frameName>
+            <frameName>camera</frameName>
             <hackBaseline>0.07</hackBaseline>
             <distortionK1>0.0</distortionK1>
             <distortionK2>0.0</distortionK2>
