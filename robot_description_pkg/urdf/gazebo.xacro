@@ -100,7 +100,7 @@
     </gazebo>
 
      <!-- LIDER -->
-    <gazebo reference="hokuyo_link">
+    <gazebo reference="lider">
         <sensor type="ray" name="head_hokuyo_sensor">
         <pose>0 0 0 0 0 0</pose>
         <visualize>true</visualize>
@@ -130,7 +130,7 @@
             </noise>
         </ray>
         <plugin name="gazebo_ros_head_hokuyo_controller" filename="libgazebo_ros_laser.so">
-            <topicName>/rrbot/laser/scan</topicName>
+            <topicName>/scan</topicName>
             <frameName>lider</frameName>
         </plugin>
         </sensor>
