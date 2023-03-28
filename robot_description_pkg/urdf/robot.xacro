@@ -4,8 +4,15 @@
   <xacro:include filename="$(find robot_description_pkg)/urdf/material.xacro"/>
   <xacro:include filename="$(find robot_description_pkg)/urdf/gazebo.xacro" />
 
+ <link name="odom">
+  </link>
+
   <link name="base_link">
   </link>
+   <joint name="joint_base" type="fixed">
+        <parent link="odom"/>
+        <child link="base_link"/>
+  </joint>
 
   <!-- CHASSIS LINK -->
   <link name="chassis">
