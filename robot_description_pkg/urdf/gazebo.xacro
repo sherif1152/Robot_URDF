@@ -1,62 +1,20 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="myrobot"> 
-    <gazebo>
-        <plugin name="skid_steer_drive_controller" filename="libgazebo_ros_skid_steer_drive.so">
-            <!-- Plugin update rate in Hz -->
-            <updateRate>100.0</updateRate>
-
-            <!-- Name of front right joint, defaults to `rightFront` -->
-            <rightFrontJoint>joint_front_right_wheel</rightFrontJoint>
-
-            <!-- Name of back right joint, defaults to `rightback` -->
-            <rightRearJoint>joint_back_right_wheel</rightRearJoint>
-
-            <!-- Name of front left joint, defaults to ` leftFront` -->
-            <leftFrontJoint>joint_front_left_wheel</leftFrontJoint>
-
-            <!-- Name of back right joint, defaults to `leftback` -->
-            <leftRearJoint>joint_back_left_wheel</leftRearJoint>
-
-
-            <!-- The distance from the center of one wheel to the other, in meters, defaults to 0.34 m -->
-            <wheelSeparation>0.5</wheelSeparation>
-
-            <!-- Diameter of the wheels, in meters, defaults to 0.15 m -->
-            <wheelDiameter>0.2</wheelDiameter>
-    
-            <!-- Wheel acceleration, in rad/s^2, defaults to 0.0 rad/s^2 -->
-            <wheelAcceleration>1.0</wheelAcceleration>
-
-            <!-- Maximum torque which the wheels can produce, in Nm, defaults to 5 Nm -->
-            <torque>20</torque>
-
-            <!-- Topic to receive geometry_msgs/Twist message commands, defaults to `cmd_vel` -->
-            <topicName>cmd_vel</topicName>
-
-            <!-- Topic to publish nav_msgs/Odometry messages, defaults to `odom` -->
-            <odometryTopic>odom</odometryTopic>
-
-            <!-- Odometry frame, defaults to `odom` -->
-            <odometryFrame>odom</odometryFrame>   
-
-            <!-- Robot frame to calculate odometry from, defaults to `base_footprint` -->   
-            <robotBaseFrame>chassis</robotBaseFrame>
-
-             <!-- Odometry source, 0 for ENCODER, 1 for WORLD, defaults to WORLD -->
-            <odometrySource>1</odometrySource>
-
-            <!-- Set to true to publish transforms for the wheel links, defaults to false -->
-            <publishWheelTF>true</publishWheelTF>
-
-            <!-- Set to true to publish transforms for the odometry, defaults to true -->
-            <publishOdom>true</publishOdom>
-
-            <!-- Set to true to publish sensor_msgs/JointState on /joint_states for the wheel joints, defaults to false -->
-            <publishWheelJointState>true</publishWheelJointState>
-
-            <!-- Set to true to swap right and left wheels, defaults to true -->
-            <legacyMode>false</legacyMode>
-        </plugin>
+      <gazebo>
+    <plugin name="skid_steer_drive_controller" filename="libgazebo_ros_skid_steer_drive.so">
+        <updateRate>100.0</updateRate>
+        <robotNamespace>/</robotNamespace>
+        <leftFrontJoint>joint_front_left_wheel</leftFrontJoint>
+        <rightFrontJoint>joint_front_right_wheel</rightFrontJoint>
+        <leftRearJoint>joint_back_left_wheel</leftRearJoint>
+        <rightRearJoint>joint_back_right_wheel</rightRearJoint>
+        <wheelSeparation>0.5</wheelSeparation>
+        <wheelDiameter>0.2</wheelDiameter>
+        <robotBaseFrame>chassis</robotBaseFrame>
+        <torque>20</torque>
+        <topicName>cmd_vel</topicName>
+        <broadcastTF>false</broadcastTF>
+    </plugin>
     </gazebo>
 
     <!-- camera -->
