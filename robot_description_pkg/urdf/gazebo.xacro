@@ -13,7 +13,7 @@
         <robotBaseFrame>chassis</robotBaseFrame>
         <torque>20</torque>
         <topicName>cmd_vel</topicName>
-        <broadcastTF>false</broadcastTF>
+        <broadcastTF>true</broadcastTF>
     </plugin>
     </gazebo>
 
